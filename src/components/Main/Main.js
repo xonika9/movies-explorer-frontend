@@ -1,7 +1,7 @@
 import './Main.css';
 import { Link } from 'react-router-dom';
 import PromoImage from '../../images/promo-image.png';
-import Photo from '../../images/my-photo1.jpg';
+import Photo from '../../images/my-photo.jpg';
 
 function Main() {
   return (
