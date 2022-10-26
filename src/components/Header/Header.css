@@ -9,9 +9,11 @@
 
 .header {
   display: grid;
-  grid-template-columns: 85px 1fr;
+  grid-template-columns: 57px 1fr;
   padding: 18px 70px;
-  background-color: #00b2ca;
+
+/* background-color: #00b2ca; */
+  background-color: #fff;
 }
 
 .header__links {
@@ -35,12 +37,26 @@
   color: #000;
 }
 
+.header__menu-button {
+  display: none;
+  width: 44px;
+  height: 38px;
+  border: none;
+  background: url("../../images/burger.svg") no-repeat center;
+  cursor: pointer;
+  transition: opacity 0.5s ease;
+}
+
 @media screen and (max-width: 1024px) {
   .header {
     display: flex;
     justify-content: space-between;
     padding-right: 30px;
     padding-left: 30px;
+  }
+
+  .header__menu-button {
+    display: block;
   }
 }
 
@@ -61,5 +77,11 @@
 
   .header__button {
     padding: 5px 12px;
+  }
+
+  .header__menu-button {
+    padding: 0 10px;
+    width: 40px;
+    background-size: contain;
   }
 }
