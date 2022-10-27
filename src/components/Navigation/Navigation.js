@@ -1,5 +1,4 @@
 import './Navigation.css';
-
 import { NavLink, Link } from 'react-router-dom';
 
 function Navigation({ isOpened, handleClose }) {

@@ -1,5 +1,4 @@
 import './MoviesCard.css';
-
 import MovieCard from '../../images/movie-card.png';
 
 function MoviesCard() {
