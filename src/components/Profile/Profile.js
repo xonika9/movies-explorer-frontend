@@ -32,7 +32,7 @@ function Profile() {
 
   return (
     <>
-      <Header />
+      <Header page={'profile'} loggedIn={true} />
       <section className="profile">
         <h1 className="profile__title">{`Привет, ${currentUser.name}!`}</h1>
         {isEdited ? (

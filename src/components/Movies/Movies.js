@@ -4,10 +4,10 @@ import Footer from '../Footer/Footer';
 import SearchForm from '../SearchForm/SearchForm';
 import MoviesCardList from '../MoviesCardList/MoviesCardList';
 
-function Main() {
+function Movies() {
   return (
     <>
-      <Header />
+      <Header page={'movies'} loggedIn={true} />
       <main className="movies">
         <SearchForm />
         <MoviesCardList />
@@ -17,4 +17,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default Movies;

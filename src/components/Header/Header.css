@@ -11,9 +11,10 @@
   display: grid;
   grid-template-columns: 57px 1fr;
   padding: 18px 70px;
+}
 
-/* background-color: #00b2ca; */
-  background-color: #fff;
+.header_place_main {
+  background-color: #00b2ca;
 }
 
 .header__links {

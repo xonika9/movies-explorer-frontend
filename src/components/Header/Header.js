@@ -1,10 +1,9 @@
 import './Header.css';
 import { useState } from 'react';
-
 import { Link } from 'react-router-dom';
 import Navigation from '../Navigation/Navigation';
 
-function Header() {
+function Header({ page, loggedIn }) {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   function openNavMenu() {
@@ -15,18 +14,29 @@ function Header() {
     setIsNavOpen(false);
   }
   return (
-    <header className="header">
+    <header className={`header header_place_${page}`}>
       <Link to="/" className="logo header__logo" />
-      <button className="button header__menu-button" onClick={openNavMenu} />
-      <Navigation isOpened={isNavOpen} handleClose={closeNavMenu} />
-      {/* <div className="header__links">
-        <Link to="/signup" className="link header__link">
-          Регистрация
-        </Link>
-        <Link to="/signin" className="link header__link button header__button">
-          Войти
-        </Link>
-      </div> */}
+      {loggedIn ? (
+        <>
+          <button
+            className="button header__menu-button"
+            onClick={openNavMenu}
+          />
+          <Navigation isOpened={isNavOpen} handleClose={closeNavMenu} />
+        </>
+      ) : (
+        <div className="header__links">
+          <Link to="/signup" className="link header__link">
+            Регистрация
+          </Link>
+          <Link
+            to="/signin"
+            className="link header__link button header__button"
+          >
+            Войти
+          </Link>
+        </div>
+      )}
     </header>
   );
 }

@@ -1,14 +1,13 @@
 import './SavedMovies.css';
-
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import SearchForm from '../SearchForm/SearchForm';
 import MoviesCardList from '../MoviesCardList/MoviesCardList';
 
-function Main() {
+function SavedMovies() {
   return (
     <>
-      <Header />
+      <Header page={'saved-movies'} loggedIn={true} />
       <main className="saved-movies">
         <SearchForm />
         <MoviesCardList />
@@ -18,4 +17,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default SavedMovies;
