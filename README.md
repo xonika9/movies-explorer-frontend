@@ -2,6 +2,8 @@
 
 Movies Explorer
 
+Link to the template https://drive.google.com/file/d/1tRRWNp2eyk3JI6lZjIFIuh7d4LmOiP9S/view?usp=sharing
+
 ***
 ## Stack
 
