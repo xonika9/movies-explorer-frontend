@@ -1,6 +1,6 @@
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(364px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(363px, 1fr));
   justify-items: center;
   gap: 37px 24px;
   margin: 0;
@@ -27,6 +27,7 @@
 
 @media screen and (max-width: 1024px) {
   .cards {
+    grid-template-columns: repeat(auto-fill, minmax(338px, 1fr));
     gap: 30px 30px;
   }
 
