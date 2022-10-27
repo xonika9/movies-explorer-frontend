@@ -24,7 +24,7 @@
 }
 
 .not-found__link {
-  margin-top: 184px;
+  margin-top: 168px;
   color: #00b2ca;
   text-decoration: none;
   font-weight: 400;
@@ -54,7 +54,7 @@
   }
 
   .not-found__link {
-    margin-top: 284px;
+    margin-top: 274px;
     font-size: 12px;
   }
 }
