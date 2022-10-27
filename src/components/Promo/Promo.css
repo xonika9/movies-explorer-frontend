@@ -7,7 +7,7 @@
   line-height: 1.3;
 }
 
-.promo__title {
+.promo__heading {
   margin: 0;
   padding: 0;
   max-width: 626px;
@@ -52,7 +52,7 @@
     min-height: 400px;
   }
 
-  .promo__title {
+  .promo__heading {
     letter-spacing: -0.04em;
     font-size: 31px;
     line-height: 1.26;
