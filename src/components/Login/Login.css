@@ -1,0 +1,40 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  padding: 70px 0;
+  max-width: 396px;
+}
+
+.login__heading {
+  margin: 40px 0;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+@media screen and (max-width: 1024px) {
+  .login {
+    padding: 232px 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .login {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 56px 30px 30px;
+    max-width: 100%;
+
+    grid-template-rows: auto auto 1fr auto;
+  }
+
+  .login__heading {
+    margin: 50px 0 80px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.2;
+  }
+}

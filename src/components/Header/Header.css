@@ -1,0 +1,88 @@
+.logo {
+  background: url("../../images/logo.svg") no-repeat center/contain;
+}
+
+.header__logo {
+  width: 38px;
+  height: 38px;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 57px 1fr;
+  padding: 18px 70px;
+}
+
+.header_place_main {
+  background-color: #00b2ca;
+}
+
+.header__links {
+  display: flex;
+  align-items: center;
+  justify-self: end;
+  gap: 30px;
+}
+
+.header__link {
+  color: #fff;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+}
+
+.header__button {
+  padding: 8px 20px;
+  border-radius: 3px;
+  background-color: #f2f230;
+  color: #000;
+}
+
+.header__menu-button {
+  display: none;
+  width: 44px;
+  height: 38px;
+  border: none;
+  background: url("../../images/burger.svg") no-repeat center;
+  cursor: pointer;
+  transition: opacity 0.5s ease;
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  .header__menu-button {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .header__links {
+    gap: 14px;
+  }
+
+  .header__link {
+    font-size: 10px;
+    line-height: 1.6;
+  }
+
+  .header__button {
+    padding: 5px 12px;
+  }
+
+  .header__menu-button {
+    padding: 0 10px;
+    width: 40px;
+    background-size: contain;
+  }
+}

@@ -1,0 +1,65 @@
+.register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  padding: 70px 0;
+  max-width: 396px;
+}
+
+.register__heading {
+  margin: 40px 0;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.sign-message {
+  margin-top: 16px;
+  color: #8b8b8b;
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.21;
+}
+
+.register__link {
+  color: #4285f4;
+  text-decoration: none;
+  transition: opacity 0.5s ease;
+}
+
+.login__link {
+  color: #00b2ca;
+  transition: opacity 0.5s ease;
+}
+
+@media screen and (max-width: 1024px) {
+  .register {
+    padding: 232px 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .register {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 56px 30px 30px;
+    max-width: 100%;
+
+    grid-template-rows: auto auto 1fr auto;
+  }
+
+  .register__heading {
+    margin: 50px 0 80px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .sign-message {
+    margin-top: 14px;
+    font-size: 12px;
+  }
+}

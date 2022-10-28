@@ -1,0 +1,129 @@
+.about-me {
+  padding: 111px 70px 52px;
+}
+
+.about-me__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 45px;
+  margin-top: 66px;
+}
+
+.about-me__photo {
+  align-self: center;
+  width: 270px;
+  height: 327px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.about-me__info {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+}
+
+.about-me__name {
+  margin: 0;
+  padding: 0;
+  letter-spacing: -0.04em;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 1.16;
+}
+
+.about-me__profession {
+  margin: 0;
+  margin-top: 18px;
+  padding: 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.11;
+}
+
+.about-me__paragraph {
+  margin: 0;
+  margin-top: 26px;
+  margin-bottom: 99px;
+  padding: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.57;
+}
+
+.about-me__link {
+  margin-top: auto;
+  color: #000;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.21;
+}
+
+@media screen and (max-width: 1024px) {
+  .about-me {
+    padding: 90px 50px 0;
+  }
+
+  .about-me__photo {
+    width: 255px;
+    height: 307px;
+  }
+
+  .about-me__name {
+    font-size: 40px;
+    line-height: 1;
+  }
+
+  .about-me__profession {
+    margin-top: 16px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .about-me__paragraph {
+    margin-top: 20px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-me {
+    padding: 70px 14px 0;
+  }
+
+  .about-me__heading {
+    padding-bottom: 28px;
+    font-size: 18px;
+  }
+
+  .about-me__container {
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 60px;
+  }
+
+  .about-me__photo {
+    width: 292px;
+    height: 352px;
+  }
+
+  .about-me__name {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  .about-me__profession {
+    margin-top: 20px;
+    font-size: 11px;
+    line-height: 1.45;
+  }
+
+  .about-me__paragraph {
+    margin-top: 20px;
+    margin-bottom: 55px;
+    font-size: 11px;
+    line-height: 1.45;
+  }
+}

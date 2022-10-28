@@ -1,0 +1,141 @@
+.navigation__menu {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr auto;
+  justify-content: center;
+  margin-left: 10px;
+  height: 100%;
+}
+
+.navigation__links {
+  display: flex;
+  align-items: center;
+  justify-items: start;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation__link {
+  color: #000;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.38;
+  transition: opacity 0.5s ease;
+}
+
+.active {
+  font-weight: 500;
+}
+
+.navigation__hidden {
+  display: none;
+}
+
+.navigation__profile-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 7px;
+  padding-right: 3px;
+  padding-left: 11px;
+  max-width: 100px;
+  height: 32px;
+  border-radius: 40px;
+  background: #fff;
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.08);
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 0.92;
+}
+
+.navigation__profile-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50px;
+  background: #f5f5f5 url("../../images/icon.svg") no-repeat center;
+}
+
+.navigation__close {
+  width: 22px;
+  height: 22px;
+  border: none;
+  background: url("../../images/close.svg") no-repeat center;
+  cursor: pointer;
+  transition: opacity 0.5s ease;
+}
+
+@media screen and (max-width: 1024px) {
+  .navigation {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    visibility: hidden;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+  }
+
+  .navigation_is-opened {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .navigation__menu {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    padding: 25px 27px 92px;
+    max-width: 520px;
+    height: 89vh;
+    background-color: #fff;
+  }
+
+  .navigation__hidden {
+    display: block;
+    align-self: flex-end;
+  }
+
+  .navigation__links {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 110px;
+  }
+
+  .navigation__link {
+    padding-bottom: 5px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.21;
+  }
+
+  .active {
+    border-bottom: 2px solid #000;
+  }
+
+  .navigation__profile-link {
+    align-self: center;
+    margin-top: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navigation__menu {
+    padding: 15px 17px 48px;
+    height: 94vh;
+  }
+
+  .navigation__links {
+    gap: 25px;
+    margin-top: 105px;
+  }
+}
