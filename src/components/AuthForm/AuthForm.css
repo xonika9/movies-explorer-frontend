@@ -70,10 +70,20 @@
 
 .auth-form__submit-button_disabled {
   opacity: 0.5;
+  cursor: wait;
 }
 
 .auth-form__submit-button_disabled:hover {
   transform: none;
+}
+
+.auth-form__submit-error {
+  align-self: center;
+  margin-top: 5px;
+  color: #ee3465;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.21;
 }
 
 @media screen and (max-width: 480px) {

@@ -85,6 +85,9 @@ function Login() {
         >
           {values.password.error}
         </span>
+        <span className="auth-form__submit-error">
+          Неправильные почта или пароль
+        </span>
       </AuthForm>
       <p className="sign-message">
         Ещё не зарегистрированы?{' '}

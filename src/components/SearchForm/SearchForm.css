@@ -64,6 +64,21 @@
   background-color: #cbcbcb;
 }
 
+.search-form__input-error {
+  display: flex;
+  visibility: hidden;
+  align-items: center;
+  justify-content: center;
+  color: #ee3465;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.63;
+}
+
+.search-form__input-error_visible {
+  visibility: visible;
+}
+
 @media screen and (max-width: 1024px) {
   .search-form {
     padding-top: 81px;

@@ -111,6 +111,9 @@ function Register() {
         >
           {values.password.error}
         </span>
+        <span className="auth-form__submit-error">
+          Введите корректные данные
+        </span>
       </AuthForm>
       <p className="sign-message">
         Уже зарегистрированы?{' '}

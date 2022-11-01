@@ -19,6 +19,9 @@ function SearchForm() {
           <div className="vertical-line"></div>
           <FilterCheckbox />
         </div>
+        <span className="search-form__input-error search-form__input-error_visible">
+          Нужно ввести ключевое слово
+        </span>
       </form>
     </section>
   );
