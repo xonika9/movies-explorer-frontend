@@ -1,32 +1,27 @@
 import './Login.css';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 import useForm from '../../utils/useForm';
 import AuthForm from '../AuthForm/AuthForm';
 
-function Login() {
+function Login({ onLogin, loginError, setLoginError, isFormLoading }) {
   const initialFormValues = {
-    name: {
-      value: '',
-      error: '',
-      isValid: true,
-    },
-    email: {
-      value: '',
-      error: '',
-      isValid: true,
-    },
-    password: {
-      value: '',
-      error: '',
-      isValid: true,
-    },
+    email: '',
+    password: '',
   };
-
-  const { values, handleChange } = useForm(initialFormValues);
-
-  function handleSubmit(evt) {
-    evt.preventDefault();
-  }
+  const { values, errors, handleChange, isFormValid } =
+    useForm(initialFormValues);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onLogin({ email: values.email, password: values.password });
+  };
+  const handleInputChange = (e) => {
+    handleChange(e);
+    setLoginError('');
+  };
+  useEffect(() => {
+    setLoginError('');
+  }, [setLoginError]);
   return (
     <section className="login">
       <Link to="/" className="logo header__logo" />
@@ -35,59 +30,63 @@ function Login() {
         name="login"
         submitText="Войти"
         onSubmit={handleSubmit}
-        isValid={
-          values.email.isValid &&
-          values.password.isValid &&
-          values.email.value &&
-          values.password.value
-        }
+        isValid={isFormValid}
+        isLoading={isFormLoading}
       >
         <label htmlFor="login-email" className="auth-form__label">
           E-mail
         </label>
         <input
           className={`auth-form__input ${
-            !values.email.isValid && 'auth-form__input_invalid'
+            errors.email && 'auth-form__input_invalid'
           }`}
           type="email"
           name="email"
           placeholder="Введите email"
           id="login-email"
-          required
-          onChange={handleChange}
-          value={values.email.value}
+          onChange={handleInputChange}
+          value={values.email}
+          autoComplete={'off'}
+          disabled={isFormLoading}
           autoFocus
+          required
         />
         <span
           className={`auth-form__input-error ${
-            !values.email.isValid && 'auth-form__input-error_visible'
+            errors.email && 'auth-form__input-error_visible'
           }`}
         >
-          {values.email.error}
+          {errors.email}
         </span>
         <label htmlFor="login-password" className="auth-form__label">
           Пароль
         </label>
         <input
-          className="auth-form__input"
+          className={`auth-form__input ${
+            errors.password && 'auth-form__input_invalid'
+          }`}
           type="password"
           name="password"
           placeholder="Введите пароль"
           id="login-password"
+          onChange={handleInputChange}
+          value={values.password}
+          autoComplete={'off'}
+          disabled={isFormLoading}
           required
-          onChange={handleChange}
-          value={values.password.value}
         />
         <span
           className={`auth-form__input-error ${
-            !values.password.isValid && 'auth-form__input-error_visible'
+            errors.password && 'auth-form__input-error_visible'
           }`}
         >
-          {values.password.error}
+          {errors.password}
         </span>
-        <span className="auth-form__submit-error">
-          Неправильные почта или пароль
-        </span>
+        {loginError && (
+          <span className="auth-form__submit-error">
+            Неверный логин или пароль
+          </span>
+        )}
       </AuthForm>
       <p className="sign-message">
         Ещё не зарегистрированы?{' '}
