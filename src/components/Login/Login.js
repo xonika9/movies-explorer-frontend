@@ -48,6 +48,7 @@ function Login({ onLogin, loginError, setLoginError, isFormLoading }) {
           value={values.email}
           autoComplete={'off'}
           disabled={isFormLoading}
+          pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9._%+-]+\.[A-Za-z]{2,}$"
           autoFocus
           required
         />
@@ -83,9 +84,7 @@ function Login({ onLogin, loginError, setLoginError, isFormLoading }) {
           {errors.password}
         </span>
         {loginError && (
-          <span className="auth-form__submit-error">
-            Неверный логин или пароль
-          </span>
+          <span className="auth-form__submit-error">{loginError}</span>
         )}
       </AuthForm>
       <p className="sign-message">

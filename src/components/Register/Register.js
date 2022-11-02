@@ -58,6 +58,7 @@ function Register({
           value={values.name}
           autoComplete={'off'}
           disabled={isFormLoading}
+          pattern="^[A-Za-zА-Яа-я-\s]+$"
           autoFocus
           required
         />
@@ -83,6 +84,7 @@ function Register({
           value={values.email}
           autoComplete={'off'}
           disabled={isFormLoading}
+          pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9._%+-]+\.[A-Za-z]{2,}$"
           required
         />
         <span
@@ -117,9 +119,7 @@ function Register({
           {errors.password}
         </span>
         {registerError && (
-          <span className="auth-form__submit-error">
-            Введите корректные данные
-          </span>
+          <span className="auth-form__submit-error">{registerError}</span>
         )}
       </AuthForm>
       <p className="sign-message">

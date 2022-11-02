@@ -72,6 +72,7 @@ function Profile({
               value={values.name}
               autoComplete={'off'}
               disabled={isFormLoading}
+              pattern="^[A-Za-zА-Яа-я-\s]+$"
               required
             />
           </label>
@@ -99,6 +100,7 @@ function Profile({
               value={values.email}
               autoComplete={'off'}
               disabled={isFormLoading}
+              pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9._%+-]+\.[A-Za-z]{2,}$"
               required
             />
           </label>
