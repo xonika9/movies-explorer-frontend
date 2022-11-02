@@ -79,6 +79,10 @@
   visibility: visible;
 }
 
+.search-form__input_invalid {
+  outline: 1px solid #ee3465;
+}
+
 @media screen and (max-width: 1024px) {
   .search-form {
     padding-top: 81px;

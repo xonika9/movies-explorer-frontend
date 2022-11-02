@@ -5,6 +5,7 @@
   margin: auto;
   padding: 70px 0;
   max-width: 396px;
+  width: 100%;
 }
 
 .register__heading {
@@ -45,8 +46,9 @@
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
+    margin: 0 auto;
     padding: 56px 30px 30px;
-    max-width: 100%;
+    width: 260px;
 
     grid-template-rows: auto auto 1fr auto;
   }
