@@ -1,0 +1,68 @@
+.infotooltip {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  visibility: hidden;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.infotooltip_is-opened {
+  visibility: visible;
+  opacity: 1;
+}
+
+.infotooltip__content {
+  position: relative;
+  padding: 70px 30px;
+  width: 350px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+  color: #000;
+}
+
+.infotooltip__icon {
+  display: block;
+  margin: 0 auto;
+  width: 120px;
+  height: 120px;
+}
+
+.infotooltip__title {
+  margin: 0;
+  margin-top: 30px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.infotooltip__close-button {
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: transparent url("../../images/close-light.svg") no-repeat center;
+  cursor: pointer;
+  transition: opacity 0.5s ease;
+}
+
+.infotooltip__close-button:hover {
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 480px) {
+  .infotooltip__close-button {
+    right: 0;
+  }
+}
