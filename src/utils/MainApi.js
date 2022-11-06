@@ -1,55 +1,55 @@
-import { mainApiUrl, headers } from './config';
+import { MAIN_API_URL, HEADERS } from './config';
 
 const checkResponse = (res) => {
   return res.ok ? res.json() : Promise.reject(`Ошибка: ${res.status}`);
 };
 
 export function register({ name, email, password }) {
-  return fetch(`${mainApiUrl}/signup`, {
+  return fetch(`${MAIN_API_URL}/signup`, {
     method: 'POST',
-    headers,
+    headers: HEADERS,
     body: JSON.stringify({ name, email, password }),
   }).then((res) => checkResponse(res));
 }
 
 export function login({ email, password }) {
-  return fetch(`${mainApiUrl}/signin`, {
+  return fetch(`${MAIN_API_URL}/signin`, {
     method: 'POST',
-    headers,
+    headers: HEADERS,
     credentials: 'include',
     body: JSON.stringify({ email, password }),
   }).then((res) => checkResponse(res));
 }
 
 export function logout() {
-  return fetch(`${mainApiUrl}/signout`, {
+  return fetch(`${MAIN_API_URL}/signout`, {
     method: 'GET',
-    headers,
+    headers: HEADERS,
     credentials: 'include',
   }).then((res) => checkResponse(res));
 }
 
 export function getCurrentUser() {
-  return fetch(`${mainApiUrl}/users/me`, {
+  return fetch(`${MAIN_API_URL}/users/me`, {
     method: 'GET',
-    headers,
+    headers: HEADERS,
     credentials: 'include',
   }).then((res) => checkResponse(res));
 }
 
 export function updateUser({ name, email }) {
-  return fetch(`${mainApiUrl}/users/me`, {
+  return fetch(`${MAIN_API_URL}/users/me`, {
     method: 'PATCH',
-    headers,
+    headers: HEADERS,
     credentials: 'include',
     body: JSON.stringify({ name, email }),
   }).then((res) => checkResponse(res));
 }
 
 export function getSavedMovies() {
-  return fetch(`${mainApiUrl}/movies`, {
+  return fetch(`${MAIN_API_URL}/movies`, {
     method: 'GET',
-    headers,
+    HEADERS,
     credentials: 'include',
   }).then((res) => checkResponse(res));
 }
@@ -67,9 +67,9 @@ export function saveMovie({
   nameRU,
   nameEN,
 }) {
-  return fetch(`${mainApiUrl}/movies`, {
+  return fetch(`${MAIN_API_URL}/movies`, {
     method: 'POST',
-    headers,
+    headers: HEADERS,
     credentials: 'include',
     body: JSON.stringify({
       country,
@@ -88,9 +88,9 @@ export function saveMovie({
 }
 
 export function deleteMovie(id) {
-  return fetch(`${mainApiUrl}/movies/${id}`, {
+  return fetch(`${MAIN_API_URL}/movies/${id}`, {
     method: 'DELETE',
-    headers,
+    headers: HEADERS,
     credentials: 'include',
   }).then((res) => checkResponse(res));
 }

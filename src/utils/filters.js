@@ -1,4 +1,4 @@
-import { shortMovies } from './config';
+import { SHORT_MOVIES } from './config';
 
 const filterByKeyword = (array, keyWord) => {
   return array.filter((item) => {
@@ -6,7 +6,7 @@ const filterByKeyword = (array, keyWord) => {
   });
 };
 const filterByDuration = (array) => {
-  return array.filter((item) => item.duration <= shortMovies);
+  return array.filter((item) => item.duration <= SHORT_MOVIES);
 };
 
 export { filterByKeyword, filterByDuration };

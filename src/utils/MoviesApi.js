@@ -1,12 +1,12 @@
-import { moviesApiUrl, headers } from './config';
+import { MOVIES_API_URL, HEADERS } from './config';
 
 const checkResponse = (res) => {
   return res.ok ? res.json() : Promise.reject(`Ошибка: ${res.status}`);
 };
 
 export function getAllMovies() {
-  return fetch(moviesApiUrl, {
+  return fetch(MOVIES_API_URL, {
     method: 'GET',
-    headers,
+    headers: HEADERS,
   }).then((res) => checkResponse(res));
 }

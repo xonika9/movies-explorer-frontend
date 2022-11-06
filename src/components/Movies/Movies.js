@@ -9,13 +9,13 @@ import * as MoviesApi from '../../utils/MoviesApi';
 import { filterByKeyword, filterByDuration } from '../../utils/filters';
 import useWindowWidth from '../../utils/useWindowWidth';
 import {
-  screenSizeSm,
-  screenSizeMed,
-  cardsPerPageLarge,
-  cardsPerPageMed,
-  cardsPerPageSm,
-  moreCardsLarge,
-  moreCardsMed,
+  SCREEN_SIZE_SMALL,
+  SCREEN_SIZE_MEDIUM,
+  CARDS_PER_PAGE_LARGE,
+  CARDS_PER_PAGE_MEDIUM,
+  CARDS_PER_PAGE_SMALL,
+  MORE_CARDS_LARGE,
+  MORE_CARDS_MEDIUM,
 } from '../../utils/config';
 
 function Movies({ loggedIn, savedMovies, handleSaveMovie, handleDeleteMovie }) {
@@ -64,7 +64,8 @@ function Movies({ loggedIn, savedMovies, handleSaveMovie, handleDeleteMovie }) {
     setIsFilterActive((prevState) => !prevState);
   };
   const addMovies = () => {
-    let addition = windowWidth > screenSizeMed ? moreCardsLarge : moreCardsMed;
+    let addition =
+      windowWidth > SCREEN_SIZE_MEDIUM ? MORE_CARDS_LARGE : MORE_CARDS_MEDIUM;
     setSlicedMovies((prevVal) => {
       return prevVal.concat(
         filteredMovies.slice(prevVal.length, prevVal.length + addition),
@@ -80,12 +81,12 @@ function Movies({ loggedIn, savedMovies, handleSaveMovie, handleDeleteMovie }) {
   }, [isFilterActive, searchedMovies]);
   useEffect(() => {
     let limit;
-    if (windowWidth > screenSizeMed) {
-      limit = cardsPerPageLarge;
-    } else if (windowWidth > screenSizeSm) {
-      limit = cardsPerPageMed;
+    if (windowWidth > SCREEN_SIZE_MEDIUM) {
+      limit = CARDS_PER_PAGE_LARGE;
+    } else if (windowWidth > SCREEN_SIZE_SMALL) {
+      limit = CARDS_PER_PAGE_MEDIUM;
     } else {
-      limit = cardsPerPageSm;
+      limit = CARDS_PER_PAGE_SMALL;
     }
     if (filteredMovies.length > limit) {
       setSlicedMovies(filteredMovies.slice(0, limit));
