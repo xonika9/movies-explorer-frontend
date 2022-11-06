@@ -116,7 +116,7 @@ function App() {
       })
       .catch((err) => {
         setLoggedIn(false);
-        localStorage.removeItem('isAuth');
+        localStorage.clear();
         console.log(err);
       });
   }, []);
