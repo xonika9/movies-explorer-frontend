@@ -35,7 +35,7 @@ function App() {
         navigate('/movies');
       })
       .catch((err) => {
-        setLoginError(`Неверный логин или пароль`);
+        setLoginError(err.message);
       })
       .finally(() => setIsFormLoading(false));
   };
@@ -47,7 +47,7 @@ function App() {
         handleLogin({ email, password });
       })
       .catch((err) => {
-        setRegisterError(`Введите корректные данные`);
+        setRegisterError(err.message);
       })
       .finally(() => setIsFormLoading(false));
   };
@@ -58,7 +58,6 @@ function App() {
         setCurrentUser(user.data);
         setProfileError('');
         setIsInfoTooltipOpen(true);
-        setProfileError('');
       })
       .catch((err) => {
         setProfileError(err.message);
