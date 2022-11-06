@@ -49,17 +49,26 @@
   width: 30px;
   height: 30px;
   border: none;
-  background: transparent url("../../images/like.svg") no-repeat center;
+  background: none;
   text-align: center;
   cursor: pointer;
 }
 
-.card__like_active {
-  background: url("../../images/like-active.svg");
+.card__like_type_save {
+  background: transparent url("../../images/like.svg") no-repeat center;
+}
+
+.card__like_type_active {
+  background: url("../../images/like-active.svg") no-repeat center;
   transition: background-image 0.3s ease;
 }
 
-.card__like_active:hover {
+.card__like_type_active:hover {
+  background: url("../../images/like-remove.svg") no-repeat center;
+  transition: background-image 0.3s ease;
+}
+
+.card__like_type_delete {
   background: url("../../images/like-remove.svg");
 }
 

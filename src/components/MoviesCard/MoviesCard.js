@@ -63,13 +63,15 @@ function MoviesCard({
           <h2 className="card__title">{movie.nameRU}</h2>
           {isSavedMoviesPage ? (
             <button
-              className="card__like card__like_active"
+              className="card__like card__like_type_delete"
               type="button"
               onClick={toggleDelete}
             />
           ) : (
             <button
-              className={`card__like ${savedMovie && 'card__like_active'}`}
+              className={`card__like card__like_type_save ${
+                savedMovie && 'card__like_type_active'
+              }`}
               type="button"
               onClick={toggleSave}
             ></button>
