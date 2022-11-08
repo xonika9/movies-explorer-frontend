@@ -11,6 +11,8 @@
 }
 
 .app__container {
+  display: flex;
+  flex-direction: column;
   margin: auto;
   min-width: 320px;
   min-height: 100vh;

@@ -91,6 +91,7 @@
   .navigation__menu {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     margin-left: auto;
     padding: 25px 27px 92px;
     max-width: 520px;
@@ -124,7 +125,7 @@
 
   .navigation__profile-link {
     align-self: center;
-    margin-top: auto;
+    margin-top: 400px;
   }
 }
 
