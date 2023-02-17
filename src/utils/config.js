@@ -1,4 +1,4 @@
-const MAIN_API_URL = 'https://api.movex.nomoredomains.icu';
+const MAIN_API_URL = 'https://api.movex.xonika.ru';
 const MOVIES_API_URL = 'https://api.nomoreparties.co/beatfilm-movies';
 const HEADERS = {
   'Content-Type': 'application/json',
