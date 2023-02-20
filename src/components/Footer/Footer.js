@@ -1,13 +1,14 @@
 import './Footer.css';
 
 function Footer() {
+  const year = new Date().getFullYear();
   return (
     <footer className="footer">
       <p className="footer__heading">
         Учебный проект Яндекс.Практикум х BeatFilm.
       </p>
       <div className="footer__container">
-        <p className="footer__copyright">© 2022</p>
+        <p className="footer__copyright">&copy; {year}</p>
         <ul className="footer__links">
           <li className="footer__links-item">
             <a
