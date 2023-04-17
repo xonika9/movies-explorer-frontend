@@ -3,6 +3,10 @@
 Movies Explorer is a web application to help you explore the films of the Beat Film Festival, an international documentary film festival about new culture.
 Here you can create your own account, search for various films and short films, add them to your favorites, and watch trailers.
 
+<p align="center">
+  <img src="/movex-scr-min.png"/ width="100%">
+</p>
+
 ### About the festival [beatfilmfestival.ru](https://beatfilmfestival.ru/)
 
 The biggest documentary film festival in Russia, founded in 2010 by Kirill Sorokin and Alena Bocharova. Beat Film Festival is held annually in Moscow at the end of May and the beginning of June. Over the years it has grown into a major cultural event that brings the best examples of contemporary documentary film about music, contemporary art, urbanism, street culture, fashion and new technologies to the attention of citizens. The mission of the festival is to form a cultural agenda and open the genre of documentary films for the wide public.
@@ -14,8 +18,6 @@ Each Beat Film Festival features dozens of full-length films, tens of thousands 
 Frontend [https://movex.xonika.ru/](https://movex.xonika.ru/)
 
 Backend [https://api.movex.xonika.ru/](https://api.movex.xonika.ru/)
-
-***
 
 ## Stack
 
@@ -46,8 +48,7 @@ Backend [https://api.movex.xonika.ru/](https://api.movex.xonika.ru/)
   * Changing username and email info
   * Validating forms
 
-***
-### Installation
+## Installation
 
 ```bash
 # Clone the repository
