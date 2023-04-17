@@ -63,5 +63,5 @@ npm i
 npm start
 
 # Builds the app for production at the `build` folder
-npm build
+npm run build
 ```
