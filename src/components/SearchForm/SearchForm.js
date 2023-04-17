@@ -39,7 +39,7 @@ function SearchForm({ name, handleSearch, isChecked, handleCheckBox }) {
             }`}
             type="text"
             name="search"
-            placeholder="Фильм"
+            placeholder="Введите ключевое слово"
             required
             autoFocus
             onChange={handleSearchInputChange}
