@@ -4,7 +4,7 @@ Movies Explorer is a web application to help you explore the films of the Beat F
 Here you can create your own account, search for various films and short films, add them to your favorites, and watch trailers.
 
 <p align="center">
-  <img src="/movex-scr-min.png"/ width="100%">
+  <img src="/movex-scr-min.png" width="100%">
 </p>
 
 ### About the festival [beatfilmfestival.ru](https://beatfilmfestival.ru/)
