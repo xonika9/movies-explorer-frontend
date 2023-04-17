@@ -1,7 +1,6 @@
 import './App.css';
 import { Routes, Route, useNavigate, Navigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import Main from '../Main/Main';
 import Movies from '../Movies/Movies';
 import SavedMovies from '../SavedMovies/SavedMovies';
 import Profile from '../Profile/Profile';
@@ -130,7 +129,16 @@ function App() {
       <div className="app">
         <div className="app__container">
           <Routes>
-            <Route path="/" element={<Main loggedIn={loggedIn} />} />
+            <Route
+              path="/"
+              element={
+                loggedIn === null ? null : loggedIn ? (
+                  <Navigate to="/movies" replace />
+                ) : (
+                  <Navigate to="/signin" replace />
+                )
+              }
+            />
             <Route
               path="/movies"
               element={
